@@ -12,23 +12,10 @@ import {
   Text,
   View,
 } from "react-native";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
-  let x = 1;
-
-  const { landscape } = useDeviceOrientation();
-
-  console.log("App executed");
-
-  console.log(Dimensions.get("screen"));
-
-  console.log(useDimensions());
-
-  return (
-    <View>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <WelcomeScreen />;
 }
 
 const styles = StyleSheet.create({
