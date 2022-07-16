@@ -1,21 +1,11 @@
-import {
-  useDeviceOrientation,
-  useDimensions,
-} from "@react-native-community/hooks";
+import {} from "@react-native-community/hooks";
 import { StatusBar } from "expo-status-bar";
-import {
-  Alert,
-  Button,
-  Dimensions,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { StyleSheet } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
-  return <WelcomeScreen />;
+  return <ViewImageScreen />;
 }
 
 const styles = StyleSheet.create({
