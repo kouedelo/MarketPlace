@@ -42,10 +42,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   tagline: { fontSize: 25, fontWeight: "600", paddingVertical: 20 },
-
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "#4ecdc4",
-  },
 });
