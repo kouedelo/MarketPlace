@@ -1,9 +1,17 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { Platform, SafeAreaView, StyleSheet, View } from "react-native";
 import Constants from "expo-constants";
 
 function Screen({ children, style }) {
-  return <SafeAreaView style={[styles.screen, style]}>{children}</SafeAreaView>;
+  return Platform.OS === "ios" ? (
+    <SafeAreaView style={[styles.screen, style]}>
+      <View style={style}>{children}</View>
+    </SafeAreaView>
+  ) : Platform.OS === "android" ? (
+    <View style={[styles.screen, style]}>{children}</View>
+  ) : (
+    ""
+  );
 }
 
 export default Screen;

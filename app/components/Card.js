@@ -6,7 +6,7 @@ import AppText from "./AppText";
 function Card({ title, subTitle, image }) {
   return (
     <View style={styles.card}>
-      <Image source={image} />
+      <Image source={image} style={styles.image} />
       <View style={styles.detailsContainer}>
         <AppText>{title} </AppText>
         <AppText>{subTitle} </AppText>
