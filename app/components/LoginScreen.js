@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Image, StyleSheet } from "react-native";
 import * as yup from "yup";
 import AppButton from "./AppButton";
+import AppFormField from "./AppFormField";
 import AppTextInput from "./AppTextInput";
 import ErrorMessage from "./ErrorMessage";
 import Screen from "./Screen";
@@ -21,34 +22,26 @@ function LoginScreen(props) {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+        {({ handleSubmit }) => (
           <>
-            <AppTextInput
+            <AppFormField
               autoCapitalize="none"
               autoCorrect={false}
               icon="email"
               keyboardType="email-address"
-              onBlur={() => {
-                setFieldTouched("email");
-              }}
-              onChangeText={handleChange("email")}
+              name="email"
               placeholder="Email"
               textContentType="emailAddress"
             />
-            <ErrorMessage error={errors.email} visible={touched.email} />
-            <AppTextInput
+            <AppFormField
               autoCapitalize="none"
               autoCorrect={false}
               icon="lock"
-              onBlur={() => {
-                setFieldTouched("password");
-              }}
-              onChangeText={handleChange("password")}
+              name="password"
               placeholder="Password"
               secureTextEntry
               textContentType="password"
             />
-            <ErrorMessage error={errors.password} visible={touched.password} />
             <AppButton title="Login" onPress={handleSubmit} />
           </>
         )}
