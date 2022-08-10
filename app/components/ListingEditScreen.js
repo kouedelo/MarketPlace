@@ -93,9 +93,9 @@ function ListingEditScreen(props) {
         <AppFormPicker
           items={categories}
           name="category"
-          //   numberOfColumns={3}
+          numberOfColumns={3}
           placeholder="Category"
-          //   PickerItemComponent={CategoryPickerItem}
+          PickerItemComponent={CategoryPickerItem}
           width="50%"
         />
         <AppFormField
