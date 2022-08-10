@@ -9,14 +9,15 @@ import ListItemDeleteAction from "./../components/ListItemDeleteAction";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title:
+      "ggjkjrr gr jgfijgijrijgijs gjsjgf sjfgjjgijrijjgjj ;s jsorio;vmsjg ",
+    description: "ajflawepeiruf dj;lskjfwuqoweiury  a d hfehu",
     image: require("../assets/random_person.jpg"),
   },
   {
     id: 2,
-    title: "T2",
-    description: "D2",
+    title: "jeiruour frf aow fa aow orf  j jlkj",
+    description: "fjeo w jee9  fjiajeijfoi ejfeijfowi iowjoieohforio",
     image: require("../assets/random_person.jpg"),
   },
   // {
@@ -62,8 +63,10 @@ function MessagesScreen(props) {
           setMessages([
             {
               id: 3,
-              title: "T3",
-              description: "D3",
+              title:
+                "This is amazing coz I got to play a role in all bla bla bla bla bla bla bla",
+              description:
+                "I like it like it like that, I like like it like that",
               image: require("../assets/random_person.jpg"),
             },
           ]);

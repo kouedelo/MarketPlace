@@ -5,7 +5,7 @@ import Constants from "expo-constants";
 function Screen({ children, style }) {
   return Platform.OS === "ios" ? (
     <SafeAreaView style={[styles.screen, style]}>
-      <View style={style}>{children}</View>
+      <View style={[styles.view, style]}>{children}</View>
     </SafeAreaView>
   ) : Platform.OS === "android" ? (
     <View style={[styles.screen, style]}>{children}</View>
@@ -21,4 +21,5 @@ const styles = StyleSheet.create({
     paddingTop: Constants.statusBarHeight,
     flex: 1,
   },
+  view: { flex: 1 },
 });
