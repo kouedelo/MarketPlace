@@ -17,7 +17,7 @@ import LoginScreen from "./app/components/LoginScreen";
 import ListingEditScreen from "./app/components/ListingEditScreen";
 
 export default function App() {
-  return <MessagesScreen />;
+  return <ListingEditScreen />;
 }
 
 const styles = StyleSheet.create({
