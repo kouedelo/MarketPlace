@@ -26,6 +26,7 @@ import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/components/LoginScreen";
 import ListingEditScreen from "./app/components/ListingEditScreen";
 import ImageInput from "./app/components/ImageInput";
+import ImageInputList from "./app/components/ImageInputList";
 
 const requestPermission = async () => {
   //  const {granted}= Permissions.askAsync(Permissions.CAMERA);
@@ -36,28 +37,22 @@ const requestPermission = async () => {
 };
 
 export default function App() {
-  const [imageUri, setImageUri] = useState();
+  const [imageUris, setImageUris] = useState([]);
 
-  useEffect(() => {
-    requestPermission();
-  });
+  const handleAdd = (uri) => {
+    setImageUris([...imageUris, uri]);
+  };
 
-  const selectImage = async () => {
-    try {
-      const result = await ImagePicker.launchImageLibraryAsync();
-      if (!result.cancelled) {
-        setImageUri(result.uri);
-      }
-    } catch (error) {
-      console.log("Error reading an image", error);
-    }
+  const handleRemove = (uri) => {
+    setImageUris(imageUris.filter((imageUri) => imageUri != uri));
   };
 
   return (
     <Screen>
-      <ImageInput
-        imageUri={imageUri}
-        onChangeImage={(uri) => setImageUri(uri)}
+      <ImageInputList
+        imageUris={imageUris}
+        onAddImage={handleAdd}
+        onRemoveImage={handleRemove}
       />
     </Screen>
   );
