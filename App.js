@@ -25,6 +25,7 @@ import AppTextInput from "./app/components/AppTextInput";
 import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/components/LoginScreen";
 import ListingEditScreen from "./app/components/ListingEditScreen";
+import ImageInput from "./app/components/ImageInput";
 
 const requestPermission = async () => {
   //  const {granted}= Permissions.askAsync(Permissions.CAMERA);
@@ -56,6 +57,7 @@ export default function App() {
     <Screen>
       <Button title="Select Image" onPress={selectImage} />
       <Image source={{ uri: imageUri }} style={{ width: 200, height: 200 }} />
+      <ImageInput imageUri={imageUri} />
     </Screen>
   );
 }
